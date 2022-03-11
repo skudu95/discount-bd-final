@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="2dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/myPhotosIV"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:scaleType="center"
+        android:src="@drawable/logo" />
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="curved">
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="curvedLogo">
+        <item name="cornerSize">25%</item>
+    </style>
+
+    <style name="round">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="postCurved">
+        <item name="cornerSize">3%</item>
+    </style>
+
+
+</resources>

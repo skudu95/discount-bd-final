@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">DiscountBD</string>
+
+    <string name="menuBtn">menuBtn</string>
+    <string name="myPhotos">myPhotos</string>
+    <string name="savedPhotos">savedPhotos</string>
+    <string name="shopName">Shop Name</string>
+    <string name="userName">Username</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmentProfile">Profile fragment</string>
+    <string name="fragmentHome">Home fragment</string>
+    <string name="fragmentAddPost">Add Post fragment</string>
+    <string name="fragmentSearch">Search fragment</string>
+
+    <string name="app_logo">DiscountBD_Logo</string>
+    <string name="noAccount">Do not have an account? <b>SignUp</b></string>
+    <string name="loggedInAs">You\'re Logged in as</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="logIn">Login</string>
+    <string name="logout">Logout</string>
+    <string name="customerLogin">Login as Customer</string>
+    <string name="sellerLogin">Login as Seller</string>
+    <string name="profileName">Profile Name</string>
+    <string name="postImg">postImg</string>
+    <string name="btnLike">btnLike</string>
+    <string name="btnComment">btnComment</string>
+    <string name="btnShare">btnShare</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="btnEditProfile">Edit Profile</string>
+    <string name="btnSave">Save</string>
+    <string name="btnChangePhoto">Change Photo</string>
+    <string name="bio">Bio</string>
+    <string name="caption">say something about your post...</string>
+    <string name="btnMessage">btnMessage</string>
+    <string name="btnRegister">Register</string>
+</resources>

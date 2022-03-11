@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImgSL"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/profile_img"
+                app:shapeAppearanceOverlay="@style/round"
+                app:strokeColor="@color/logo_color"
+                app:strokeWidth="1dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/userNameSL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="username" />
+
+                <TextView
+                    android:id="@+id/shopNameSL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Shop Name"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnFollowSL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/logo_color"
+            android:drawableLeft="@drawable/add_icon"
+            android:drawableTint="@color/white"
+            android:text="Follow"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textAllCaps="false" />
+        <!--        android:textColor="@color/teal_700"
+                style="@style/TextAppearance.Material3.BodyMedium"-->
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

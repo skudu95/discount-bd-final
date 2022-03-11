@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="2dp"
+    app:shapeAppearanceOverlay="@style/postCurved">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImgPV"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/profile_img"
+                app:shapeAppearanceOverlay="@style/round" />
+
+            <TextView
+                android:id="@+id/profileNamePV"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center|start"
+                android:text="@string/profileName"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/postTimePV"
+            style="@style/TextAppearance.Material3.LabelSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="3dp"
+            android:text="59 minutes ago" />
+
+        <TextView
+            android:id="@+id/descriptionPV"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="description"
+            android:textColor="@color/logo_color" />
+
+        <!--        TODO: fix the imageview width, previously used match parent-->
+        <ImageView
+            android:id="@+id/postsImgPV"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/postImg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:id="@+id/likeCommShareLinear"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnLikePV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/btnLike"
+                android:padding="5dp"
+                android:src="@drawable/like_empty_icon" />
+
+            <ImageButton
+                android:id="@+id/btnUnlikePV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/btnComment"
+                android:padding="5dp"
+                android:src="@drawable/unlike_empty_icon" />
+
+            <ImageButton
+                android:id="@+id/btnSharePV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/btnShare"
+                android:padding="5dp"
+                android:src="@drawable/share_icon"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
