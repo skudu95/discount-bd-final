@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".activities.SellerRegistrationActivity">
+    tools:context=".activities.UserRegistrationActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,25 +21,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="Seller Registration" />
+                android:text="Customer Registration" />
 
             <TextView
+                android:id="@+id/titleUserACTV"
                 style="@style/TextAppearance.MaterialComponents.Caption"
-                android:id="@+id/titleSellerAccountTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/titleLabelTv"
                 android:layout_centerHorizontal="true"
-                android:text="Create a New Seller Account" />
+                android:text="Create a New Customer Account" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/appLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/titleUserACTV"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:layout_below="@id/titleSellerAccountTV"
                 app:shapeAppearanceOverlay="@style/curved">
 
                 <ImageView
@@ -84,7 +84,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/shopNameTil"
+                android:id="@+id/fullNameTil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/userNameTil"
@@ -93,82 +93,65 @@
                 android:layout_marginBottom="10dp">
 
                 <EditText
-                    android:id="@+id/shopNameET"
+                    android:id="@+id/fullNameET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/shopName"
+                    android:hint="Full Name"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!--    Email-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/bioTil"
+                android:id="@+id/customerEmailTil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/shopNameTil"
+                android:layout_below="@id/fullNameTil"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="10dp">
 
                 <EditText
-                    android:id="@+id/bioET"
+                    android:id="@+id/customerEmailEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/bio"
-                    android:inputType="text" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/emailTil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bioTil"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="10dp">
-
-                <EditText
-                    android:id="@+id/emailET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/email"
+                    android:hint="Email"
                     android:inputType="textEmailAddress" />
 
+
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!--    Password-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordTil"
+                android:id="@+id/customerPassTil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/emailTil"
+                android:layout_below="@id/customerEmailTil"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="10dp">
+                app:passwordToggleEnabled="true">
 
                 <EditText
-                    android:id="@+id/passwordET"
+                    android:id="@+id/customerPassEt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/password"
-                    android:inputType="textVisiblePassword" />
+                    android:hint="Password"
+                    android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!--Button-->
             <Button
-                android:id="@+id/btnRegister"
+                android:id="@+id/customerRegistrationBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/passwordTil"
+                android:layout_below="@id/customerPassTil"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:backgroundTint="@color/logo_color"
-                android:text="@string/btnRegister"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
+                android:text="Register"
+                android:textAllCaps="false" />
         </RelativeLayout>
 
     </ScrollView>

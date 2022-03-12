@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activities.SellerLoginActivity">
+    android:padding="20dp"
+    tools:context=".activities.UserLoginActivity">
+
 
     <TextView
         android:id="@+id/titleLabelTv"
@@ -13,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Seller Login" />
+        android:text="Customer Login" />
 
     <TextView
         style="@style/TextAppearance.MaterialComponents.Caption"
@@ -21,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/titleLabelTv"
         android:layout_centerHorizontal="true"
-        android:text="Login to your Seller Account" />
+        android:text="Login to your Customer Account" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/appLogo"
@@ -55,22 +56,19 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <!--Email-->
-
+    <!--    Email-->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sellerEmailTilSignIn"
+        android:id="@+id/customerEmailTil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/appLogo"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/appLogo">
 
         <EditText
-            android:id="@+id/sellerEmailEtSignIn"
+            android:id="@+id/customerEmailEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
+            android:hint="Email"
             android:inputType="textEmailAddress" />
 
 
@@ -78,40 +76,35 @@
 
     <!--    Password-->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sellerPassTilSignIn"
-        app:passwordToggleEnabled="true"
+        android:id="@+id/customerPassTil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sellerEmailTilSignIn"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_below="@id/customerEmailTil"
+        android:layout_centerInParent="true"
+        app:passwordToggleEnabled="true">
 
         <EditText
-            android:id="@+id/sellerPassEtSignIn"
+            android:id="@+id/customerPassEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
+            android:hint="Password"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--Button-->
     <Button
-        android:id="@+id/sellerLoginBtn"
+        android:id="@+id/customerLoginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sellerPassTilSignIn"
-        android:layout_marginLeft="10dp"
+        android:layout_below="@id/customerPassTil"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
         android:backgroundTint="@color/logo_color"
         android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textAllCaps="false" />
 
     <TextView
-        android:id="@+id/noSellerAccountTv"
+        android:id="@+id/noCustomerAccountTv"
         style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -119,5 +112,4 @@
         android:layout_centerHorizontal="true"
         android:padding="5dp"
         android:text="@string/noAccount" />
-
 </RelativeLayout>

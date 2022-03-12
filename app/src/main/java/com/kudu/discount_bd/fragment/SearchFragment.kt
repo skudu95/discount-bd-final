@@ -50,7 +50,6 @@ class SearchFragment : Fragment() {
         readUsers()
         searchUsers()
 
-
         //searchView listener
         /* binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
              override fun onQueryTextSubmit(query: String?): Boolean {
@@ -81,10 +80,10 @@ class SearchFragment : Fragment() {
             override fun onQueryTextChange(newText: String?): Boolean {
 
                 tempSellerList.clear()
-                val searchText = newText!!.toLowerCase(Locale.getDefault())
+                val searchText = newText!!.lowercase(Locale.getDefault())
                 if (searchText.isNotEmpty()){
                     sellerList.forEach{
-                        if (it.userName!!.toLowerCase(Locale.getDefault()).contains(searchText)){
+                        if (it.userName!!.lowercase(Locale.getDefault()).contains(searchText)){
                             tempSellerList.add(it)
                         }
                     }
@@ -101,7 +100,7 @@ class SearchFragment : Fragment() {
     }
 
     private fun readUsers() {
-//        binding.sellerRV.visibility = View.GONE
+//        binding.sellerRV.visibility = View.INVISIBLE
         firestoreDb = FirebaseFirestore.getInstance()
         val sellersReference = firestoreDb.collection("sellers")
             .limit(20)
@@ -120,12 +119,13 @@ class SearchFragment : Fragment() {
             for (seller in sellersList) {
                 Log.d(ContentValues.TAG, "Seller: $sellersList")
             }
-//TODO: check if it works
+
             tempSellerList.addAll(sellersList)
         }
 
 
     }
+
 
 
 }

@@ -3,6 +3,7 @@
     package="com.kudu.discount_bd">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiscountBD">
         <activity
+            android:name=".activities.StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.UserLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.UserRegistrationActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.SellerRegistrationActivity"
             android:exported="false" />
         <activity
@@ -20,11 +36,6 @@
         <activity
             android:name=".activities.SellerLoginActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".activities.MainActivity"

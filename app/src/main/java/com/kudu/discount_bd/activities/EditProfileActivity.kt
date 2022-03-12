@@ -40,7 +40,7 @@ class EditProfileActivity : AppCompatActivity() {
             Log.i(TAG, "Logout Clicked")
             auth.signOut()
 
-            startActivity(Intent(this, SellerLoginActivity::class.java))
+            startActivity(Intent(this, StartActivity::class.java))
             finish()
 
         }
