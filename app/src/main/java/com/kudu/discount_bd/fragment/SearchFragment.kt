@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,25 +48,16 @@ class SearchFragment : Fragment() {
         binding.sellerRV.adapter = sellerAdapter
         binding.sellerRV.layoutManager = LinearLayoutManager(context)
 
+        sellerAdapter.setOnItemClickListener(object: SellerAdapter.OnItemClickListener{
+            override fun onItemClick(position: Int) {
+
+                Toast.makeText(context, "$position clicked", Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
         readUsers()
         searchUsers()
-
-        //searchView listener
-        /* binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-             override fun onQueryTextSubmit(query: String?): Boolean {
-                 binding.searchView.clearFocus()
-                 if (sellerList.contains(query)){
-                    sellerAdapter.filter.filter(query)
-                 }
-                 return false
-             }
-
-             override fun onQueryTextChange(newText: String?): Boolean {
-                 TODO("Not yet implemented")
-             }
-
-         })
- */
 
         return view
     }

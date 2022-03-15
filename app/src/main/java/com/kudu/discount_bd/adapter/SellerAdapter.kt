@@ -11,23 +11,36 @@ class SellerAdapter(val context: Context,
     private var sellerList: List<Seller>) :
     RecyclerView.Adapter<SellerAdapter.ViewHolder>() {
 
-    class ViewHolder(binding: SellerlistCardviewLayoutBinding) :
+    private lateinit var mListener: OnItemClickListener
+
+    interface OnItemClickListener {
+
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+        mListener = listener
+    }
+
+    class ViewHolder(binding: SellerlistCardviewLayoutBinding, listener: OnItemClickListener) :
         RecyclerView.ViewHolder(binding.root) {
 
         val root = binding.root
         val userName = binding.userNameSL
         val sShopName = binding.shopNameSL
         val sProfileImg = binding.profileImgSL
+
+        init {
+//            itemView.setOnClickListener{
+            root.setOnClickListener{
+                listener.onItemClick(adapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            SellerlistCardviewLayoutBinding.inflate(
-                LayoutInflater.from(context),
-                parent,
-                false
-            )
-        )
+            SellerlistCardviewLayoutBinding.inflate(LayoutInflater.from(context), parent, false), mListener)
 //        return ViewHolder(SellerlistCardviewLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false))
 
     }
